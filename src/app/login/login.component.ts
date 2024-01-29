@@ -33,6 +33,6 @@ export class LoginComponent {
     let user: UserModel = await this.apiService.loginUser(this.username, this.password);
     console.log(user);
     this.storeService.saveUser(user);
-    this.router.navigate(['music'])
+    this.router.navigate(['homemusic'])
   }
 }
