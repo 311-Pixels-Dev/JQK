@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-page-music',
+  selector: 'page-music',
   standalone: true,
   imports: [],
   templateUrl: './page-music.component.html',

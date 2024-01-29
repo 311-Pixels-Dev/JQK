@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {RouterOutlet, Route, Router } from '@angular/router';
+import {RouterOutlet, Router } from '@angular/router';
+
 import { ApiService } from '../api.service';
-import UserModel from '../../models/UserModel';
-import { StoreServiceService } from '../store.service';
+import { StoreService } from '../store.service';
+import UserModel from '../../models/UserModels';
 
 @Component({
   selector: 'login',
@@ -32,6 +33,6 @@ export class LoginComponent {
     let user: UserModel = await this.apiService.loginUser(this.username, this.password);
     console.log(user);
     this.storeService.saveUser(user);
-    this.router.navigate(['final'])
+    this.router.navigate(['music'])
   }
 }
