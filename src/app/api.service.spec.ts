@@ -1,16 +1,26 @@
-import { TestBed } from '@angular/core/testing';
+import { Injectable } from '@angular/core';
+import UserModel from '../models/UserModel';
+import axios from 'axios';
 
-import { ApiService } from './api.service';
+@Injectable({
+  providedIn: 'root'
+})
+export class ApiService {
 
-describe('ApiService', () => {
-  let service: ApiService;
+  baseUrl : string = "http://localhost:8090";
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ApiService);
-  });
+  async loginUser(username: string, password: string): Promise<UserModel> {
+    let response = await axios.post(this.baseUrl + "/api/collections/users/auth-with-password", {
+      identity: username,
+      password: password
+    });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+    let user: UserModel = response.data.record;
+
+    return user;
+  }
+
+  constructor(){
+
+  }
+}
