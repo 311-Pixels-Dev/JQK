@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div>
+        <div class="mb-3">
+            <label for="exampleInputEmail">Email address / Username</label>
+            <input type="text" [(ngModel)]="username">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword">Password</label>
+            <input type="password" [(ngModel)]="password">
+        </div>
+        <button class="btn btn-primary" (click)="login()">Login</button>
+</div>
