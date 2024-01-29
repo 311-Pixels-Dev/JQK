@@ -4,7 +4,7 @@ import UserModel from '../models/UserModel';
 @Injectable({
   providedIn: 'root'
 })
-export class StoreServiceService {
+export class StoreService {
 
   constructor() { }
 
