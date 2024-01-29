@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 import { PageMusicComponent } from './page-music/page-music.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, PageMusicComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, PageMusicComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

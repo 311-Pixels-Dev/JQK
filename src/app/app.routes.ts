@@ -5,7 +5,7 @@ import { PlaylistUserComponent } from './playlist-user/playlist-user.component';
 
 export const routes: Routes = [
     {
-        path: "music", component: PageMusicComponent
+        path: "homemusic", component: PageMusicComponent
     },
     {
         path: "login", component: LoginComponent

@@ -12,4 +12,8 @@ export class StoreService {
     localStorage.setItem('userid', user.id);
     localStorage.setItem('username', user.username);
   }
+
+  getUser():string{
+    return localStorage.getItem('username') || "Anonimo";
+  }
 }
